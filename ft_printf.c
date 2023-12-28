@@ -45,7 +45,7 @@ int	ft_printf(char *tab, ...)
 	while (tab[i])
 	{
 		if (!tab[i] || (tab[i] == '%' && tab[i + 1] == '\0'))
-			return -((tab[i] == '%' && tab[i + 1] == '\0')) + 0;
+			return (-((tab[i] == '%' && tab[i + 1] == '\0')) + 0);
 		else if (tab[i] == '%' && tab[i + 1] != '\0')
 		{
 			i++;
