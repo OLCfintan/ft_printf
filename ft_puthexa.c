@@ -46,5 +46,7 @@ int	ft_puthexa(long int x, char l)
 			tab[--i] = (x - (temp * 16)) + 48;
 		x /= 16;
 	}
-	return (ft_putstr(tab) + 2 * (l == 'p'));
+	temp = ft_putstr(tab) + 2 * (l == 'p');
+	free(tab);
+	return (temp);
 }
