@@ -6,7 +6,7 @@
 /*   By: oel-mouk <oel-mouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 22:46:57 by oel-mouk          #+#    #+#             */
-/*   Updated: 2023/12/27 22:48:31 by oel-mouk         ###   ########.fr       */
+/*   Updated: 2023/12/28 03:02:03 by oel-mouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,9 @@ int	ft_printf(char *tab, ...)
 	va_start(strings, tab);
 	while (tab[i])
 	{
-		if (tab[i] == '%')
+		if (!tab[i] || (tab[i] == '%' && tab[i + 1] == '\0'))
+			return -((tab[i] == '%' && tab[i + 1] == '\0')) + 0;
+		else if (tab[i] == '%' && tab[i + 1] != '\0')
 		{
 			i++;
 			temp += ft_temp(tab[i], strings);

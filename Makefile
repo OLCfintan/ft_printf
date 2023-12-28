@@ -1,9 +1,9 @@
 NAME = libftprintf.a
 
-	CC = cc
+CC = cc
 
-	SRCS = ft_puthexa.c ft_floor.c ft_log10.c
-			ft_pow.c ft_putnbr.c ft_putchar.c ft_putstr.c ft_printf.c
+SRCS = ft_puthexa.c ft_floor.c ft_log10.c\
+		ft_pow.c ft_putnbr.c ft_putchar.c ft_putstr.c ft_printf.c
 
 CFLAGS = -Wall -Wextra -Werror 
 	
